@@ -17,5 +17,12 @@
       "node",
       "isomorphic-fetch"
     ]
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "angularCompilerOptions": {
+    "genDir": "aot",
+    "skipMetadataEmit" : true
   }
 }

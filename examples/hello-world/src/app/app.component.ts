@@ -58,7 +58,6 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   // Inject Angular2Apollo service
   constructor(apollo: Angular2Apollo) {
-    console.log('apollo', apollo);
     this.apollo = apollo;
   }
 
@@ -72,10 +71,6 @@ export class AppComponent implements OnInit, AfterViewInit {
     })
       // Return only users, not the whole ApolloQueryResult
       .map(result => result.data.users) as ApolloQueryObservable<any>;
-
-    /*this.emptyUsers.subscribe(r => {
-      console.log('r', r);
-    });*/
 
     // Add debounce time to wait 300 ms for a new change instead of keep hitting the server
     this.nameControl.valueChanges.debounceTime(300).subscribe(name => {
