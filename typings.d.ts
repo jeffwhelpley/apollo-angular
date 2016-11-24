@@ -1,18 +1,13 @@
 /// <reference types="typed-graphql" />
 
-declare module 'lodash.isequal' {
+declare module 'lodash.isfunction' {
   import main = require('lodash');
-  export = main.isEqual;
+  export = main.isFunction;
 }
 
-declare module 'lodash.forin' {
+declare module 'lodash.isobject' {
   import main = require('lodash');
-  export = main.forIn;
-}
-
-declare module 'lodash.assign' {
-  import main = require('lodash');
-  export = main.assign;
+  export = main.isObject;
 }
 
 declare module 'lodash.omit' {
